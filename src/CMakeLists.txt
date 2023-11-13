@@ -1,0 +1,8 @@
+add_subdirectory(app1)
+#add_subdirectory(app2)
+add_subdirectory(lib-account)
+add_subdirectory(lib-deep)
+add_subdirectory(lib-mystring)
+add_subdirectory(lib-player)
+add_subdirectory(lib-testaccount)
+add_subdirectory(lib-threads)
