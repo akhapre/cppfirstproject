@@ -3,8 +3,8 @@
 #include "deep.h"
 #include "Player.h"
 #include "Mystring.h"
-#include "TestAcount.h"
 #include "TestThreads.h"
+#include "fmt/format.h"
 
 #include <memory>
 using namespace std;
@@ -19,7 +19,9 @@ void test_TestThreads();
 
 int main(int argc, char const *argv[])
 {
-    std::cout << "Hello world\n";
+    //std::cout << "Hello world\n";
+	std::cout << fmt::format("Hello CMake.3$ %s", "Ashish") << std::endl;
+
     //test_account();
     //test_deep();
     //learn_const_method();
