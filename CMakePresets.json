@@ -45,8 +45,28 @@
                 "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
                 "CMAKE_C_COMPILER": "/usr/bin/gcc",
                 "CMAKE_CXX_COMPILER": "/usr/bin/g++",
-                "CMAKE_BUILD_TYPE": "Debug"
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_TOOLCHAIN_FILE": {
+                    "value": "/home/akhapre/vcpkg/scripts/buildsystems/vcpkg.cmake",
+                    "type": "FILEPATH"
+                }
             }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "Linux-WSL-Build",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "Opensuse-WSL-Debug"
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "Linux-WSL-Test",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "Opensuse-WSL-Debug"
         }
     ]
 }
