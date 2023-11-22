@@ -51,9 +51,32 @@
                     "type": "FILEPATH"
                 }
             }
-        }
+        },
+        {
+            "name": "RasberryPi-Debug",
+            "displayName": "RasberryPi-Debug",
+            "description": "Using compilers: C = /usr/bin/gcc, CXX = /usr/bin/g++",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "generator": "Unix Makefiles",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_C_COMPILER": "/usr/bin/gcc",
+                "CMAKE_CXX_COMPILER": "/usr/bin/g++",
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_TOOLCHAIN_FILE": {
+                    "value": "/home/akhapre/Projects/vcpkg/scripts/buildsystems/vcpkg.cmake",
+                    "type": "FILEPATH"
+                }
+            }
+        }        
     ],
     "buildPresets": [
+        {
+            "name": "RasberryPi-Build",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "RasberryPi-Debug"
+        },
         {
             "name": "Linux-WSL-Build",
             "description": "",
@@ -67,6 +90,12 @@
             "description": "",
             "displayName": "",
             "configurePreset": "Opensuse-WSL-Debug"
+        },
+        {
+            "name": "RasberryPi-Test",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "RasberryPi-Debug"
         }
     ]
 }
